@@ -1,6 +1,6 @@
 //
 //  Log.swift
-//  OSLog
+//  RLLog
 //
 //  Copyright (c) 2019-2020 Rocket Insights, Inc.
 //
@@ -27,11 +27,11 @@ import Foundation
 import os
 
 /**
- Provides an interface into Apple's Unified Logging facility. Instances of this type correspond to custom `OSLog` objects, identified by an identifier string (in reverse DNS notation, like `com.rocketinsights.subsystem_name`) and a category for the logging subsystem. Both of these are used to categorize and filter related log messages and group related logging settings.
+ Provides an interface into Apple's Unified Logging facility. Instances of this type correspond to custom `RLLog` objects, identified by an identifier string (in reverse DNS notation, like `com.rocketinsights.subsystem_name`) and a category for the logging subsystem. Both of these are used to categorize and filter related log messages and group related logging settings.
 
  There is also a static interface on this type which logs to the shared `Log.default` object.
 
- This provides a thin wrapper around the `OSLog` type and the `os_log` function.
+ This provides a thin wrapper around the `RLLog` type and the `os_log` function.
 
  Generally, use the static interface to perform logging using the system’s behavior. Create a custom log object only when you want to tag messages with a specific subsystem and category for the purpose of filtering, or to customize the logging behavior of your subsystem with a profile for debugging purposes.
 
@@ -41,10 +41,10 @@ import os
  */
 public class Log {
 
-    /// The default log object, referencing `OSLog.default`.
+    /// The default log object, referencing `RLLog.default`.
     public static let `default` = Log(OSLog.default, formatter: DefaultLogFormatter(), isEnabled: true)
 
-    /// The underlying `OSLog` object.
+    /// The underlying `RLLog` object.
     public let osLog: OSLog
 
     /// The log formatter.

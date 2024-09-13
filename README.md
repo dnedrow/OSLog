@@ -1,6 +1,6 @@
-# OSLog Framework
+# RLLog Framework
 
-The `OSLog` framework provides convenience wrappers around the native `OSLog` facilities provided by Apple.
+The `RLLog` framework provides convenience wrappers around the native `OSLog` facilities provided by Apple.
 
 The framework provides logging functionality via the `Log` class. There is one function per each log level:
 
@@ -21,7 +21,7 @@ Each `Log` instance can be enabled or disabled. `Log` instances are disabled by 
 Client applications can provide an extension to the `Log` class defining static `Log` instances for each subsystem and category. For example:
 
 ```swift
-import OSLog
+import RLLog
 
 extension Log {
     private static let subsystem = "com.example.ExampleApp"
@@ -39,4 +39,3 @@ Log.ui.info("This is an info log message")
 Log.network.isEnabled = false
 Log.network.debug("This message will not appear as the logger is disabled")
 ```
-

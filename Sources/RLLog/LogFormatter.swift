@@ -1,6 +1,6 @@
 //
 //  LogFormatter.swift
-//  OSLog
+//  RLLog
 //
 //  Copyright (c) 2019-2020 Rocket Insights, Inc.
 //

@@ -1,7 +1,7 @@
 // swift-tools-version:5.1
 //
 //  Package.swift
-//  OSLog
+//  RLLog
 //
 //  Copyright (c) 2020 Rocket Insights, Inc.
 //
@@ -27,18 +27,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "OSLog",
+    name: "RLLog",
     platforms: [
         .macOS(.v10_14),
         .iOS(.v10)
     ],
     products: [
-        .library(name: "OSLog",
+        .library(name: "RLLog",
                  type: .dynamic,
-                 targets: ["OSLog"]),
+                 targets: ["RLLog"]),
     ],
     targets: [
-        .target(name: "OSLog",
+        .target(name: "RLLog",
                 dependencies: []),
     ]
 )
